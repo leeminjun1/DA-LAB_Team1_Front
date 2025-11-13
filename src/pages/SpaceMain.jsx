@@ -62,6 +62,23 @@ const img2 = css`
     margin-bottom: 40px;
 `
 
+const extra = css`
+    display: flex;
+    flex-direction: row;
+    // align-items: center;
+    //text-align: center;
+    justify-content: center;
+`
+
+const eText2 = css`
+    font-size: 14px;
+    color: #989898;
+    // margin-left: 145px;
+    text-decoration: underline;
+    // text-align: center;
+    margin-top: 43px;
+
+`
 
 
 
@@ -78,6 +95,11 @@ export default function SpaceMain() {
                     <button css={groupBtn}>그룹 생성하기</button>
                     <button css={groupBtn}>그룹 입장하기</button>
                 </div>
+
+                <div css={extra}>
+                    <p css={eText2}>로그아웃</p>
+                </div>
+
             </div>
         </>
     )
