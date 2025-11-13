@@ -2,6 +2,7 @@
 import { css } from '@emotion/react';
 import No_777 from '../assets/No_777.png';
 import No777_2 from '../assets/No777_2.png';
+import { useNavigate } from 'react-router-dom';
 
 
 const mobileWrapper = css`
@@ -44,6 +45,10 @@ const password = css`
     padding: 20px;
 `
 
+const password2 = css`
+    font-size: 15px;
+`
+
 const extra = css`
     display: flex;
     flex-direction: row;
@@ -76,7 +81,7 @@ const email2 = css`
 
 const eText1 = css`
     color: #989898;
-    font-size; 14px;
+    font-size; 12px;
     bottom: 40px;
     margin-left: 20px;
 `
@@ -84,7 +89,7 @@ const eText2 = css`
     font-size: 14px;
     color: #989898;
     margin-left: 145px;
-    
+    text-decoration: underline;
 
 `
 
@@ -96,9 +101,18 @@ const lgnBtn = css`
     height: 60px;
     font-size: 15px;
     color: #ffffff;
+    border: none;
+    cursor: pointer;
 `
 
 export default function Login() {
+    const navigate = useNavigate()
+
+    const goToSignUp = () => {
+        navigate('/signup')
+    }
+
+        
     return (
         <>
             <div css={mobileWrapper}>
@@ -114,11 +128,11 @@ export default function Login() {
                     </div>
 
                     <div css={password}>
-                        <label htmlFor="">비밀번호</label>
+                        <label htmlFor="" css={password2}>비밀번호</label>
                         <input type="password" name="password"  css={input_password} placeholder='비밀번호 입력'/>
                     </div>
 
-                    <div css={extra}>
+                    <div css={extra} onClick={goToSignUp}>
                         <p css={eText1}>아직 회원이 아니라면?</p>
                         <p css={eText2}>회원가입하기</p>
                     </div>
