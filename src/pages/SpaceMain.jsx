@@ -2,6 +2,7 @@
 import { css } from '@emotion/react';
 import No_777 from '../assets/No_777.png'
 import No777_2 from '../assets/No777_2.png'
+import { useNavigate } from 'react-router-dom'
 
 
 const mobileWrapper = css`
@@ -83,6 +84,14 @@ const eText2 = css`
 
 
 export default function SpaceMain() {
+
+    const navigate = useNavigate()
+    
+    const goToReceiverMain = () => {
+        navigate('/receiver-main')
+    }
+
+
     return (
         <>
             <div css={mobileWrapper}>
@@ -93,7 +102,7 @@ export default function SpaceMain() {
 
                 <div css={group2}>
                     <button css={groupBtn}>그룹 생성하기</button>
-                    <button css={groupBtn}>그룹 입장하기</button>
+                    <button onClick={goToReceiverMain} css={groupBtn}>그룹 입장하기</button>
                 </div>
 
                 <div css={extra}>
