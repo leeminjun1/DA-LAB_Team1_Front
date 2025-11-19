@@ -1,12 +1,28 @@
-
-.exit{
-    float: left;
-    padding-left: 30px;
-    padding-top: 30px;
-}
-
-.cloverbtn{
-    float: right;
-    padding-right: 30px;
-    padding-top: 30px;
-}
+/* 전체 헤더 래퍼 */
+.header-grid {
+    width: 100%;
+    max-width: 402px;       
+    padding: 30px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;  
+    align-items: center;
+    box-sizing: border-box;
+  }
+  
+  .exit,
+  .cloverbtn {
+    width: 28px;      
+    height: 28px;
+    cursor: pointer;
+  }
+  
+  
+  .exit {
+    float: none;
+  }
+  
+  .cloverbtn {
+    float: none;
+  }
+  

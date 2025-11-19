@@ -1,7 +1,9 @@
 // import "./GiverMain.css";
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
-import Header from "../component/Header";
+import Header from "../component/Giver-Header";
+
+import { Space } from "../../api/backend_clover/src/space"; 
 
 const mobileWrapper = css`
   width: 100vw;
@@ -14,7 +16,7 @@ const mobileWrapper = css`
 `;
 
 const h1 = css`
-  margin-top: 113px;
+  margin-top: 15px;
   padding: 10px;
   color: #304125;
   font-family: Pretendard;
